@@ -12,14 +12,14 @@ An example:
 Let’s consider a game with 4 final states each one got a value assigned to it. Assuming you are the maximizer player who got the first play, which mean you are the root and you opponent at the next level. 
 
 
-![Image of the first tree](/images/minimax.png)
+![Image of the first tree]( minimax-python-implementation/images/minmax.png)
 
 
 Since Minimax is a backtracking algorithm, we are going to test all possible paths and go back in order to choose the right move to do.
 
 In this example the minimizer is going to choose 3 for the first two state and 2 for the next ones. 
 
-![Image of the first tree](/images/minimax1.png)
+![Image of the first tree]( minimax-python-implementation/images/minmax1.png )
 
 
 Then you are going to choose the maximum of these two values which is 3. 
