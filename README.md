@@ -54,4 +54,6 @@ Then we are going to print the results in a good curated way like we have a real
 
 enjoy this brief and comprehensive implementation of minimax algorithm in python3 😁
 
+source : [https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/)
+
 
