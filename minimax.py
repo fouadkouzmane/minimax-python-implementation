@@ -1,14 +1,14 @@
 #the node's classes 
 from random import randrange
 
-#la classe d'un noeud ordinaire 
+#ordinary node  
 class node : 
     def __init__(self):
         self.childs = []
         self.value = 0
     def __str__(self): 
         return "{}".format(self.value)
-#la classe d'un noeud feuille 
+#leaf class 
 class nodef : 
     def __init__(self):
         self.value = 0
@@ -17,17 +17,17 @@ class nodef :
 
 #MINIMAX-methods 
 
-#methode qui qui fait le lien entre un noeud et ses fils 
-def makeTree(noder,nodex,nodey):
+def makeTree(noder,nodex,nodey): #connecting the node with the childs
+
     noder.childs.append(nodex)
     noder.childs.append(nodey)
     
-#methode de l'algorithme 
-def minimax(node):
+ 
+def minimax(node): #apply the minimax algorithm to a given tree (ref by the root node)
     v = MAX_VALUE(node)
     return v 
 
-def MAX_VALUE(nodez):
+def MAX_VALUE(nodez): #returns the max value of a node 
     if isinstance(nodez,nodef) : return nodez.value #si on a une feuille retourne sa valeur 
     else :
         v = -10000 
@@ -36,7 +36,7 @@ def MAX_VALUE(nodez):
             nodez.value = v
         return v 
         
-def MIN_VALUE(nodez):
+def MIN_VALUE(nodez): #returns the min value of a node
     if isinstance(nodez,nodef) : return nodez.value #si on a une feuille retourne sa valeur
     else :
         v = 10000
@@ -50,19 +50,19 @@ def MIN_VALUE(nodez):
 noder = node()
 node11 = node()
 node12 = node()
-makeTree(noder,node11,node12) #faire la liasion
+makeTree(noder,node11,node12) #linking 
 node21 = nodef()
-node21.value=randrange(30) #aulieu des fonctions heuristiques 
+node21.value=randrange(30) #random leaf value 
 node22 = nodef()
-node22.value=randrange(30) #aulieu des fonctions heuristiques 
-makeTree(node11,node21,node22) #faire la liasion
+node22.value=randrange(30) 
+makeTree(node11,node21,node22) 
 node23 = nodef()
-node23.value=randrange(30) #aulieu des fonctions heuristiques 
+node23.value=randrange(30)  
 node24 = nodef()
-node24.value=randrange(30)#aulieu des fonctions heuristiques 
-makeTree(node12,node23,node24) #faire la liasion
+node24.value=randrange(30)
+makeTree(node12,node23,node24) 
 
-#affichage de l'arbre avec le poids de chaque noued après l'application de minimax 
+#Printing the tree with the value of each node  
 
 print("resultat : {}".format(minimax(noder)))
 print('\n')
